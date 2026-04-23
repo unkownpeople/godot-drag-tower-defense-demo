@@ -1,30 +1,53 @@
 # tuozuai
 
-Godot 4 prototype project.
+基于 Godot 4 开发的 2D 拖拽塔防生存战斗演示原型。
 
-## Overview
+## 项目简介
 
-- Genre: 2D top-down drag-tower defense / survival combat demo
-- Engine: Godot 4.6
-- Main menu scene: `res://res/scenes/ui/MainMenu.tscn`
+本项目是一个以“玩家靠近并长按连接塔体，通过拖拽获得战斗收益”为核心玩法的原型 Demo。  
+当前版本已具备主菜单、单局战斗、敌人波次、升级、物品获取、Boss 战与基础结算流程。
 
-## Project Structure
+## 玩法概述
 
-- `Main.tscn`: main combat scene entry
-- `Tower.tscn`: source scene for the tower
-- `player.tscn`: source scene for the player
-- `res/scenes/`: combat, pickups, and UI scenes
-- `res/scripts/`: gameplay scripts
-- `res/Items/`: item resources
-- `res/charactor/` and `res/meis/`: art assets
+- 玩家靠近塔后长按连接
+- 拖拽可强化塔的战斗表现
+- 击杀敌人可获得经验与掉落物
+- 通过升级和物品构筑形成战斗变化
+- 在多波敌人压力后进入 Boss 战
 
-## Run
+## 当前内容
 
-1. Open the project folder with Godot 4.6.
-2. Run the project from the editor.
+- 主菜单进入游戏
+- 玩家、塔、近战敌人、远程敌人、Boss
+- 敌人波次生成与基础节奏
+- 升级选择与物品系统
+- 宝箱与掉落拾取
+- 战斗特效与基础 UI
+- 单局结算与返回主菜单流程
 
-## Upload Notes
+## 项目结构
 
-- Upload the source project, not only a packaged build.
-- Packaged builds are better attached to GitHub Releases.
-- The source repository is better for resume and portfolio review.
+- `Main.tscn`：主战斗场景入口
+- `Tower.tscn`：塔的源场景
+- `player.tscn`：玩家源场景
+- `res/scenes/`：战斗、拾取物、UI 等场景
+- `res/scripts/`：核心玩法脚本
+- `res/Items/`：物品资源
+- `res/charactor/`、`res/meis/`：角色与美术资源
+
+## 运行方式
+
+1. 使用 Godot 4.6 打开项目目录
+2. 直接运行项目
+3. 默认从主菜单场景进入
+
+## 开发环境
+
+- 引擎版本：Godot 4.6
+- 项目类型：2D 原型 Demo
+
+## 仓库说明
+
+- 本仓库上传的是源码工程
+- 打包后的可执行版本更适合后续作为 Release 附件发布
+- 源码仓库更适合用于展示开发过程、功能实现与项目能力
