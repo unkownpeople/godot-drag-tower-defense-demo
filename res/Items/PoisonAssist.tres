@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://res/scripts/data/ItemData.gd" id="1_k1w0n"]
+
+[resource]
+script = ExtResource("1_k1w0n")
+item_name = "毒液辅助"
+item_type = 1
+effect_value = 8.0
+description_text = "毒液半径25，持续3秒，范围内的敌人受到伤害8/秒"
+category = 2
+tags = PackedStringArray("PoisonPool")
+duration_seconds = 3.0
+radius = 25.0
+damage_per_second = 8.0
+slow_ratio = 0.0

@@ -1,0 +1,226 @@
+[gd_scene format=3 uid="uid://dhvwyejey8uiw"]
+
+[ext_resource type="PackedScene" uid="uid://cux1beef1iryf" path="res://player.tscn" id="1_uu6xs"]
+[ext_resource type="Texture2D" uid="uid://dvfsjvwgr2c6l" path="res://res/meis/地板 (3).png" id="2_20pc6"]
+[ext_resource type="PackedScene" uid="uid://dc40s3pcwpeon" path="res://Tower.tscn" id="2_r0du0"]
+[ext_resource type="Texture2D" uid="uid://ombgsnu32wis" path="res://res/meis/边界.png" id="3_5vvyt"]
+[ext_resource type="Script" uid="uid://c84kxus2c4pno" path="res://res/scripts/Main.gd" id="3_main"]
+[ext_resource type="PackedScene" uid="uid://b8xqm2n3y0p4k" path="res://res/scenes/GameUI.tscn" id="4_gameui"]
+[ext_resource type="Script" uid="uid://cdpxvljoq7wim" path="res://res/scripts/Spawner.gd" id="5_spawner"]
+[ext_resource type="PackedScene" path="res://res/scenes/ui/UpgradeMenu.tscn" id="6_upgrade"]
+[ext_resource type="PackedScene" path="res://res/scenes/ui/SettlementMenu.tscn" id="7_settlement"]
+[ext_resource type="Texture2D" uid="uid://xke4pxy04fx" path="res://res/meis/障碍物1.png" id="9_obstacle1"]
+[ext_resource type="Texture2D" uid="uid://clc4poiiow6ia" path="res://res/meis/障碍物2.png" id="10_obstacle2"]
+[ext_resource type="Texture2D" uid="uid://ciqtlakko0bx6" path="res://res/meis/障碍物3.png" id="11_obstacle3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obstacle1"]
+size = Vector2(118, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obstacle2"]
+size = Vector2(102, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obstacle3"]
+size = Vector2(94, 62)
+
+[node name="Main" type="Node2D" unique_id=884081548]
+y_sort_enabled = true
+script = ExtResource("3_main")
+
+[node name="FloorLayer" type="Node2D" parent="." unique_id=991080299]
+z_index = -30
+scale = Vector2(0.7486445, 0.7007412)
+
+[node name="GroundEffectLayer" type="Node2D" parent="." unique_id=1462210001]
+z_index = -12
+
+[node name="WorldOverlayLayer" type="Node2D" parent="." unique_id=1462210002]
+z_index = 20
+
+[node name="BackShadow" type="Sprite2D" parent="FloorLayer" unique_id=209910802]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(575, 255)
+scale = Vector2(0.87292385, 1.7885379)
+texture = ExtResource("2_20pc6")
+
+[node name="BackShadow2" type="Sprite2D" parent="FloorLayer" unique_id=1695382095]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(589, -335.00003)
+scale = Vector2(0.87292385, 1.7885379)
+texture = ExtResource("2_20pc6")
+
+[node name="BackShadow3" type="Sprite2D" parent="FloorLayer" unique_id=199995935]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(1569, 249.99991)
+scale = Vector2(0.87292385, 1.7885379)
+texture = ExtResource("2_20pc6")
+
+[node name="BackShadow4" type="Sprite2D" parent="FloorLayer" unique_id=1784486182]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(1565, -335)
+scale = Vector2(0.87292385, 1.7885379)
+texture = ExtResource("2_20pc6")
+
+[node name="BackShadow5" type="Sprite2D" parent="FloorLayer" unique_id=834377538]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(569, 866.99994)
+scale = Vector2(0.87292385, 1.7885379)
+texture = ExtResource("3_5vvyt")
+
+[node name="boundary" type="Sprite2D" parent="FloorLayer" unique_id=1976611395]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(569, 866.99994)
+scale = Vector2(0.87292385, 1.7885379)
+texture = ExtResource("3_5vvyt")
+
+[node name="boundary2" type="Sprite2D" parent="FloorLayer" unique_id=135541267]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(1561, 864)
+scale = Vector2(0.87292385, 1.7885379)
+texture = ExtResource("3_5vvyt")
+
+[node name="boundary3" type="Sprite2D" parent="FloorLayer" unique_id=267482212]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(-260.00003, 497.00003)
+rotation = 1.5747094
+scale = Vector2(0.87292385, 1.7885379)
+texture = ExtResource("3_5vvyt")
+
+[node name="boundary4" type="Sprite2D" parent="FloorLayer" unique_id=17310626]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(-192.34764, -345.34857)
+rotation = 1.5747094
+scale = Vector2(0.60875964, 1.5793681)
+texture = ExtResource("3_5vvyt")
+
+[node name="boundary5" type="Sprite2D" parent="FloorLayer" unique_id=90612525]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(586.3931, -933.2974)
+rotation = -3.1297824
+scale = Vector2(0.87292385, 1.7885379)
+texture = ExtResource("3_5vvyt")
+
+[node name="boundary6" type="Sprite2D" parent="FloorLayer" unique_id=484672697]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(1558.8174, -941.8598)
+rotation = -3.1297824
+scale = Vector2(0.87292385, 1.7885379)
+texture = ExtResource("3_5vvyt")
+
+[node name="boundary7" type="Sprite2D" parent="FloorLayer" unique_id=767930611]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(2389.6528, -239.74615)
+rotation = -1.5700414
+scale = Vector2(0.87292385, 1.7885379)
+texture = ExtResource("3_5vvyt")
+
+[node name="boundary8" type="Sprite2D" parent="FloorLayer" unique_id=1038305717]
+modulate = Color(0.8201289, 0.8370208, 0.85644287, 0.72156864)
+position = Vector2(2338.894, 633.6148)
+rotation = -1.5700414
+scale = Vector2(0.6962472, 1.4365427)
+texture = ExtResource("3_5vvyt")
+
+[node name="Obstacle1" type="StaticBody2D" parent="." unique_id=2075371258]
+position = Vector2(213.00002, 57.000008)
+scale = Vector2(1.3637882, 1.6080415)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstacle1" unique_id=2087814400]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("9_obstacle1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle1" unique_id=1558916344]
+shape = SubResource("RectangleShape2D_obstacle1")
+
+[node name="Obstacle2" type="StaticBody2D" parent="." unique_id=875511852]
+position = Vector2(887, 80)
+scale = Vector2(1.4831635, 1.5161672)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstacle2" unique_id=1603738842]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("10_obstacle2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle2" unique_id=1876698255]
+shape = SubResource("RectangleShape2D_obstacle2")
+
+[node name="Obstacle3" type="StaticBody2D" parent="." unique_id=1627685226]
+position = Vector2(1039, 175)
+scale = Vector2(-1.655649, 1.5259666)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstacle3" unique_id=2126764023]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("11_obstacle3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle3" unique_id=924534880]
+shape = SubResource("RectangleShape2D_obstacle3")
+
+[node name="Player" parent="." unique_id=1700694016 instance=ExtResource("1_uu6xs")]
+position = Vector2(511, 257)
+
+[node name="FollowCamera" type="Camera2D" parent="Player" unique_id=1769630929]
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+
+[node name="Tower" parent="." unique_id=1023314262 instance=ExtResource("2_r0du0")]
+position = Vector2(586, 255)
+
+[node name="GameUI" parent="." unique_id=1974143574 instance=ExtResource("4_gameui")]
+
+[node name="UpgradeMenu" parent="." unique_id=1148729046 instance=ExtResource("6_upgrade")]
+
+[node name="SettlementMenu" parent="." unique_id=293866149 instance=ExtResource("7_settlement")]
+
+[node name="Spawner" type="Node" parent="." unique_id=1234567890]
+script = ExtResource("5_spawner")
+
+[node name="Obstacle4" type="StaticBody2D" parent="." unique_id=984891260]
+position = Vector2(227, 467.99997)
+scale = Vector2(1.3637882, 1.6080415)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstacle4" unique_id=1729559698]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("9_obstacle1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle4" unique_id=2097304401]
+shape = SubResource("RectangleShape2D_obstacle1")
+
+[node name="Obstacle5" type="StaticBody2D" parent="." unique_id=1586917181]
+position = Vector2(594, 571.99994)
+rotation = 3.1415927
+scale = Vector2(-1.7218729, -1.5259666)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstacle5" unique_id=651318141]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("11_obstacle3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle5" unique_id=1307337561]
+shape = SubResource("RectangleShape2D_obstacle3")
+
+[node name="Obstacle6" type="StaticBody2D" parent="." unique_id=1231619308]
+position = Vector2(525, -200)
+scale = Vector2(2.0783186, 2.0849328)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstacle6" unique_id=303635716]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("10_obstacle2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle6" unique_id=1739175064]
+shape = SubResource("RectangleShape2D_obstacle2")
+
+[node name="Obstacle7" type="StaticBody2D" parent="." unique_id=1975148905]
+position = Vector2(779, 577)
+rotation = 3.1247663
+scale = Vector2(1.7345169, -2.2562218)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstacle7" unique_id=1419239278]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("9_obstacle1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle7" unique_id=1782274435]
+shape = SubResource("RectangleShape2D_obstacle1")

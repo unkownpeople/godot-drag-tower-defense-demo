@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://dh2lvwa4sixml"]
+
+[ext_resource type="Script" uid="uid://b42lh6eq2ylko" path="res://res/scripts/ui/MainMenu.gd" id="1_mainmenu"]
+[ext_resource type="Texture2D" uid="uid://cb755q7en0kni" path="res://res/meis/地板 (2).png" id="2_floor"]
+[ext_resource type="Texture2D" uid="uid://cy1c8tw8dyuvx" path="res://res/meis/公告板.png" id="3_board"]
+[ext_resource type="Texture2D" uid="uid://bl2tdspeycnmw" path="res://res/meis/工具箱.png" id="4_toolbox"]
+[ext_resource type="Texture2D" uid="uid://cjamievpj70nc" path="res://res/meis/床.png" id="5_bed"]
+[ext_resource type="Texture2D" uid="uid://dmwbrakck8bfj" path="res://res/meis/门 (2).png" id="6_c3yia"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1932373388]
+layer = 5
+script = ExtResource("1_mainmenu")
+
+[node name="Root" type="Control" parent="." unique_id=558149193]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackdropBase" type="ColorRect" parent="Root" unique_id=1078208806]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.176471, 0.156863, 0.121569, 1)
+
+[node name="FloorTop" type="TextureRect" parent="Root" unique_id=1607664954]
+modulate = Color(0.8, 0.78, 0.72, 0.72)
+layout_mode = 0
+offset_left = -129.0
+offset_top = 94.00001
+offset_right = 1147.0
+offset_bottom = 552.0
+scale = Vector2(1.12, 1.08)
+mouse_filter = 2
+texture = ExtResource("2_floor")
+
+[node name="FloorFade" type="ColorRect" parent="Root" unique_id=570311027]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0666667, 0.0588235, 0.0470588, 0.35)
+
+[node name="HouseBody" type="Panel" parent="Root" unique_id=1575737610]
+self_modulate = Color(0.756863, 0.654902, 0.482353, 0.16)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -430.0
+offset_top = -240.0
+offset_right = 430.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HouseInner" type="Panel" parent="Root/HouseBody" unique_id=352548443]
+self_modulate = Color(0.211765, 0.168627, 0.109804, 0.3)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemsButton" type="TextureButton" parent="Root/HouseBody" unique_id=1346343946]
+layout_mode = 0
+offset_left = 316.0
+offset_top = -81.0
+offset_right = 900.0
+offset_bottom = 806.0
+scale = Vector2(0.23643875, 0.1945492)
+texture_normal = ExtResource("3_board")
+stretch_mode = 4
+
+[node name="SettingsButton" type="TextureButton" parent="Root/HouseBody" unique_id=1956636433]
+layout_mode = 0
+offset_left = -130.0
+offset_top = 120.0
+offset_right = 461.0
+offset_bottom = 535.0
+rotation = 0.05046872
+scale = Vector2(0.31024674, 0.29572856)
+texture_normal = ExtResource("4_toolbox")
+stretch_mode = 4
+
+[node name="QuitButton" type="TextureButton" parent="Root/HouseBody" unique_id=1569405085]
+layout_mode = 0
+offset_left = 644.0
+offset_top = 45.0
+offset_right = 1277.0
+offset_bottom = 557.0
+scale = Vector2(0.55484843, 0.4772176)
+texture_normal = ExtResource("5_bed")
+stretch_mode = 4
+
+[node name="StartButton" type="TextureButton" parent="Root/HouseBody" unique_id=2080103288]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 254.0
+offset_right = 877.0
+offset_bottom = 809.0
+scale = Vector2(0.42387247, 0.42113474)
+texture_normal = ExtResource("6_c3yia")
+stretch_mode = 4
+
+[node name="PopupOverlay" type="Control" parent="Root" unique_id=338972173]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Dim" type="ColorRect" parent="Root/PopupOverlay" unique_id=1678554274]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.054902, 0.0470588, 0.0392157, 0.8)
+
+[node name="CenterWrap" type="CenterContainer" parent="Root/PopupOverlay" unique_id=691179378]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Root/PopupOverlay/CenterWrap" unique_id=1419377762]
+custom_minimum_size = Vector2(520, 250)
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="Root/PopupOverlay/CenterWrap/Panel" unique_id=2021466983]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="PopupTitle" type="Label" parent="Root/PopupOverlay/CenterWrap/Panel/VBox" unique_id=626577816]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "占位"
+horizontal_alignment = 1
+
+[node name="PopupBody" type="Label" parent="Root/PopupOverlay/CenterWrap/Panel/VBox" unique_id=1715001505]
+custom_minimum_size = Vector2(0, 110)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
+theme_override_font_sizes/font_size = 18
+text = "后续补充内容"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="PopupCloseButton" type="Button" parent="Root/PopupOverlay/CenterWrap/Panel/VBox" unique_id=2014564126]
+custom_minimum_size = Vector2(160, 44)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "关闭"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://res/scripts/data/ItemData.gd" id="1_recovery"]
+
+[resource]
+script = ExtResource("1_recovery")
+item_name = "回复剂"
+item_type = 0
+effect_value = 1.0
+description_text = "立刻回复 1 点生命，不进入物品栏。"
+category = 0
+tags = PackedStringArray("Heal")
+duration_seconds = 0.0
+radius = 0.0
+damage_per_second = 0.0
+slow_ratio = 0.0

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://res/scripts/data/ItemData.gd" id="1_n7q6s"]
+
+[resource]
+script = ExtResource("1_n7q6s")
+item_name = "寒冷辅助"
+item_type = 1
+effect_value = 0.15
+description_text = "被命中的敌人移动速度下降15%，持续2秒"
+category = 3
+tags = PackedStringArray("Slow")
+duration_seconds = 2.0
+radius = 0.0
+damage_per_second = 0.0
+slow_ratio = 0.15

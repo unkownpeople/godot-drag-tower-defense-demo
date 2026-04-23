@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://res/scripts/ui/DamageLabel.gd" id="1_damage_label_script"]
+
+[node name="DamageLabel" type="Label"]
+offset_left = -32.0
+offset_top = -16.0
+offset_right = 32.0
+offset_bottom = 16.0
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_damage_label_script")

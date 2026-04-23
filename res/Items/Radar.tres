@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://res/scripts/data/ItemData.gd" id="1_f7j28"]
+
+[resource]
+script = ExtResource("1_f7j28")
+item_name = "雷达"
+item_type = 0
+effect_value = 50.0
+description_text = "塔攻击范围+50，重复获得+50"
+category = 0
+tags = PackedStringArray("Range")
+duration_seconds = 0.0
+radius = 0.0
+damage_per_second = 0.0
+slow_ratio = 0.0

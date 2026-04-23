@@ -1,0 +1,17 @@
+# Godot 4+ generated files
+.godot/
+.godot_user/
+/android/
+
+# Local exports
+/build/
+/dist/
+
+# Local diagnostics and temp files
+*.log
+*.tmp
+*.cache
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

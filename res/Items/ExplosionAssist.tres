@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://res/scripts/data/ItemData.gd" id="1_explosion"]
+
+[resource]
+script = ExtResource("1_explosion")
+item_name = "爆炸辅助"
+item_type = 1
+effect_value = 20.0
+description_text = "命中位置立刻产生小型爆炸，范围内敌人受到额外伤害。"
+category = 1
+tags = PackedStringArray("Explosion")
+duration_seconds = 0.0
+radius = 50.0
+damage_per_second = 0.0
+slow_ratio = 0.0

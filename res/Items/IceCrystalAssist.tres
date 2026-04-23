@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://res/scripts/data/ItemData.gd" id="1_crystal"]
+
+[resource]
+script = ExtResource("1_crystal")
+item_name = "冰晶辅助"
+item_type = 1
+effect_value = 30.0
+description_text = "敌人被击败时在原地生成冰晶，首个接触的敌人会受到伤害。"
+category = 3
+tags = PackedStringArray("Crystal")
+duration_seconds = 3.0
+radius = 0.0
+damage_per_second = 0.0
+slow_ratio = 0.0

@@ -1,0 +1,43 @@
+[gd_scene format=3 load_steps=3]
+
+[ext_resource type="Script" path="res://res/scripts/pickup/ChestPickup.gd" id="1_chest"]
+[ext_resource type="Texture2D" path="res://res/res/圆形.svg" id="2_shadow"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_chest"]
+radius = 18.0
+
+[node name="ChestPickup" type="Area2D" groups=["chest_pickup"]]
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("1_chest")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -3
+modulate = Color(0.08, 0.08, 0.08, 0.26)
+position = Vector2(0, 8)
+scale = Vector2(0.44, 0.14)
+texture = ExtResource("2_shadow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_chest")
+
+[node name="Box" type="ColorRect" parent="."]
+offset_left = -15.0
+offset_top = -25.0
+offset_right = 15.0
+offset_bottom = 1.0
+color = Color(0.56, 0.36, 0.18, 0.95)
+
+[node name="Lid" type="ColorRect" parent="."]
+offset_left = -17.0
+offset_top = -30.0
+offset_right = 17.0
+offset_bottom = -22.0
+color = Color(0.84, 0.68, 0.24, 0.98)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -44.0
+offset_top = -52.0
+offset_right = 44.0
+offset_bottom = -30.0
+horizontal_alignment = 1

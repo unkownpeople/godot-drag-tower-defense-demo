@@ -1,0 +1,235 @@
+[gd_scene format=3 uid="uid://b8xqm2n3y0p4k" load_steps=3]
+
+[ext_resource type="Script" path="res://res/scripts/ui/GameUIFlow.gd" id="1_gameui"]
+[ext_resource type="Texture2D" uid="uid://c1ou2mf67jemj" path="res://res/res/heart.svg" id="2_h7rud"]
+[ext_resource type="Texture2D" path="res://res/meis/UI/Boss 警告.png" id="3_bosswarn"]
+
+[node name="GameUI" type="CanvasLayer" unique_id=1427829811]
+script = ExtResource("1_gameui")
+
+[node name="TopUI" type="Control" parent="." unique_id=1972604602]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HealthContainer" type="Control" parent="TopUI" unique_id=1753301706]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -220.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 76.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="HealthPanel" type="Panel" parent="TopUI/HealthContainer" unique_id=931264480]
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 56.0
+mouse_filter = 2
+
+[node name="BG" type="ColorRect" parent="TopUI/HealthContainer/HealthPanel" unique_id=1833467382]
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 56.0
+color = Color(0, 0, 0, 0.3)
+
+[node name="HeartsContainer" type="HBoxContainer" parent="TopUI/HealthContainer/HealthPanel" unique_id=1784235970]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 48.0
+theme_override_constants/separation = 8
+
+[node name="Heart0" type="TextureRect" parent="TopUI/HealthContainer/HealthPanel/HeartsContainer" unique_id=1451284794]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_h7rud")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart1" type="TextureRect" parent="TopUI/HealthContainer/HealthPanel/HeartsContainer" unique_id=319619545]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_h7rud")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart2" type="TextureRect" parent="TopUI/HealthContainer/HealthPanel/HeartsContainer" unique_id=2048150294]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_h7rud")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart3" type="TextureRect" parent="TopUI/HealthContainer/HealthPanel/HeartsContainer" unique_id=1612507786]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_h7rud")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ExpContainer" type="Control" parent="TopUI" unique_id=1304464145]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 60.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="ExpPanel" type="Panel" parent="TopUI/ExpContainer" unique_id=2083164982]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="TopUI/ExpContainer/ExpPanel" unique_id=2064533692]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3)
+
+[node name="Label" type="Label" parent="TopUI/ExpContainer/ExpPanel" unique_id=1385901647]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = 2.0
+offset_right = 60.0
+offset_bottom = 20.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "0 / 20"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="TopUI/ExpContainer/ExpPanel" unique_id=402224472]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -19.0
+offset_right = 185.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+show_percentage = false
+
+[node name="ItemContainer" type="Control" parent="TopUI" unique_id=251537699]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -220.0
+offset_top = 90.0
+offset_right = -20.0
+offset_bottom = 340.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="ItemPanel" type="Panel" parent="TopUI/ItemContainer" unique_id=821846548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="TopUI/ItemContainer/ItemPanel" unique_id=222438103]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.2, 0.2, 0.8)
+
+[node name="TitleLabel" type="Label" parent="TopUI/ItemContainer/ItemPanel" unique_id=784822916]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -28.0
+offset_right = 192.0
+offset_bottom = -8.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.8)
+text = "持有物品"
+
+[node name="ItemsList" type="VBoxContainer" parent="TopUI/ItemContainer/ItemPanel" unique_id=1134544348]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 8.0
+offset_bottom = -36.0
+grow_horizontal = 2
+theme_override_constants/separation = 8
+
+[node name="WaveLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -140.0
+offset_top = 70.0
+offset_right = 140.0
+offset_bottom = 110.0
+theme_override_colors/font_color = Color(1, 0.94902, 0.717647, 1)
+theme_override_constants/outline_size = 5
+theme_override_colors/font_outline_color = Color(0.14902, 0.0627451, 0.0509804, 0.85)
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+
+[node name="BossBar" type="ProgressBar" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -260.0
+offset_top = 118.0
+offset_right = 260.0
+offset_bottom = 142.0
+show_percentage = false
+value = 100.0
+
+[node name="BossAlert" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_top = 148.0
+offset_right = 36.0
+offset_bottom = 220.0
+texture = ExtResource("3_bosswarn")
+expand_mode = 1
+stretch_mode = 5
+

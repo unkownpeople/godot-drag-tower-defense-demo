@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://res/scripts/data/ItemData.gd" id="1_2p4xd"]
+
+[resource]
+script = ExtResource("1_2p4xd")
+item_name = "助燃辅助"
+item_type = 1
+effect_value = 15.0
+description_text = "塔命中敌人附加持续伤害15/秒，持续2秒，重置后重新计算"
+category = 1
+tags = PackedStringArray("Burn")
+duration_seconds = 2.0
+radius = 0.0
+damage_per_second = 15.0
+slow_ratio = 0.0

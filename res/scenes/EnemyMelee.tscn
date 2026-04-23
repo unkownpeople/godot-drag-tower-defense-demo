@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://res/scenes/Enemy.tscn" id="1_base"]
+[ext_resource type="Texture2D" path="res://res/charactor/近战常态.png" id="2_idle"]
+
+[node name="Enemy" instance=ExtResource("1_base")]
+enemy_role = 0
+move_speed = 100.0
+max_health = 150
+attack_damage = 1
+exp_value = 10
+lock_range = 70.0
+attack_distance = 14.0
+attack_cooldown = 1.0
+ranged_charge_duration = 2.0
+ranged_interrupted_charge_duration = 1.5
+ranged_max_attack_range = 200.0
+boss_warning_radius = 300.0
+boss_charge_duration = 3.0
+boss_aoe_damage = 3
+
+[node name="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_idle")

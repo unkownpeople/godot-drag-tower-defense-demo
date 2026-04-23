@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bvjnsxpmcdcxc"]
+
+[ext_resource type="Script" uid="uid://ci7yokghbw11p" path="res://res/scripts/enemy/Enemy.gd" id="1_enemy"]
+[ext_resource type="Texture2D" uid="uid://1vid7fdds1va" path="res://res/charactor/近战常态.png" id="2_5qg6s"]
+[ext_resource type="Texture2D" uid="uid://dajtyu6hh7rn6" path="res://res/meis/boss范围伤害效果.png" id="3_warning"]
+[ext_resource type="Texture2D" uid="uid://b8fpnbe3sb1ef" path="res://res/res/圆形.svg" id="4_shadow"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hp"]
+radius = 37.01351
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_atk"]
+radius = 129.47964
+
+[node name="Enemy" type="CharacterBody2D" unique_id=377579097 groups=["enemy"]]
+scale = Vector2(0.6489059, 0.7062306)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_enemy")
+
+[node name="BossWarningSprite" type="Sprite2D" parent="." unique_id=1218753752]
+visible = false
+modulate = Color(1, 1, 1, 0.75)
+z_index = -2
+texture = ExtResource("3_warning")
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=1133417641]
+modulate = Color(0.08, 0.08, 0.08, 0.28)
+z_index = -3
+position = Vector2(0, 10)
+scale = Vector2(0.68, 0.2)
+texture = ExtResource("4_shadow")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=137919780]
+position = Vector2(0, -18)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("2_5qg6s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=667080298]
+shape = SubResource("CircleShape2D_hp")
+
+[node name="HitFlash" type="ColorRect" parent="." unique_id=1097193938]
+visible = false
+color = Color(1, 1, 1, 0.8)
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=2118949795]
+offset_left = -24.0
+offset_top = -52.0
+offset_right = 24.0
+offset_bottom = -40.0
+show_percentage = false
+
+[node name="AttackRange" type="Area2D" parent="." unique_id=885326801]
+collision_layer = 0
+collision_mask = 4
+
+[node name="AttackShape" type="CollisionShape2D" parent="AttackRange" unique_id=222849847]
+shape = SubResource("CircleShape2D_atk")
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=279644963]
+one_shot = true

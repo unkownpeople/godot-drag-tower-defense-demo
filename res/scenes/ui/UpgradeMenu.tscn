@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://res/scripts/ui/UpgradeMenuFlow.gd" id="1_upgrade"]
+
+[node name="UpgradeMenu" type="CanvasLayer"]
+visible = false
+layer = 50
+process_mode = 3
+script = ExtResource("1_upgrade")
+
+[node name="Overlay" type="ColorRect" parent="." unique_name_in_owner=true]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.0627451, 0.0431373, 0.0745098, 0.82)
+
+[node name="CenterWrap" type="CenterContainer" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Overlay/CenterWrap"]
+custom_minimum_size = Vector2(980, 420)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBox" type="VBoxContainer" parent="Overlay/CenterWrap/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Overlay/CenterWrap/Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "选择一项升级"
+horizontal_alignment = 1
+
+[node name="Hint" type="Label" parent="Overlay/CenterWrap/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.901961, 0.878431, 0.917647, 0.9)
+theme_override_font_sizes/font_size = 18
+text = "基础类 70%，特殊类 30%"
+horizontal_alignment = 1
+
+[node name="CardsContainer" type="HBoxContainer" parent="Overlay/CenterWrap/Panel/VBox" unique_name_in_owner=true]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+alignment = 1

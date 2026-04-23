@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://res/scripts/data/ItemData.gd" id="1_t9f2m"]
+
+[resource]
+script = ExtResource("1_t9f2m")
+item_name = "智能辅助"
+item_type = 0
+effect_value = 0.15
+description_text = "塔攻击速度+0.15次/秒，重复获得+0.15秒/次"
+category = 0
+tags = PackedStringArray("Speed")
+duration_seconds = 0.0
+radius = 0.0
+damage_per_second = 0.0
+slow_ratio = 0.0

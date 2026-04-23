@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://res/scripts/data/ItemData.gd" id="1_mist"]
+
+[resource]
+script = ExtResource("1_mist")
+item_name = "毒雾辅助"
+item_type = 1
+effect_value = 0.0
+description_text = "命中敌人时生成跟随毒雾，持续对范围内敌人造成伤害。"
+category = 2
+tags = PackedStringArray("Mist")
+duration_seconds = 0.0
+radius = 22.0
+damage_per_second = 5.0
+slow_ratio = 0.0
